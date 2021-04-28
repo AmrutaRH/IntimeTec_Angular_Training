@@ -1,0 +1,26 @@
+<div class="container">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Employee ID</th>
+                <th scope="col">First Name</th>
+                <th scope="col">Last Name</th>
+                <th scope="col">Department</th>
+                <th scope="col">City</th>
+                <th scope="col">Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let people of data" appColor>
+                <th scope="row">{{people.employeeid}}</th>
+                <td>{{people.fname}}</td>
+                <td>{{people.lname}}</td>
+                <td>{{people.dept}}</td>
+                <td>{{people.city}}</td>
+                <td>{{people.email}}</td>
+                
+            </tr>
+         
+        </tbody>
+    </table>
+</div>
