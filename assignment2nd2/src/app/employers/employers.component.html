@@ -1,0 +1,43 @@
+<div *ngIf="show" class="text-success">
+    You can Edit the row..!
+</div>
+<table>
+    <thead>
+        <tr>
+            <th>Employee ID</th>
+            <th >First Name</th>
+            <th >Last Name</th>
+            <th >Department</th>
+            <th>City</th>
+            <th >Email</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+        <tr *ngFor="let people of employees">
+
+            <th>
+               {{ people.employeeid}}
+            <td>
+                <input [(ngModel)]="people.fname" [readonly]="edit"/>
+            </td>
+            <td>
+                <input [(ngModel)]="people.lname" [readonly]="edit"/>
+            </td>
+            <td>
+                <input [(ngModel)]="people.dept" [readonly]="edit"/>
+            </td>
+            <td>
+                <input [(ngModel)]="people.city" [readonly]="edit"/>
+            </td>
+            <td>
+                <input [(ngModel)]="people.email" [readonly]="edit"/>
+            </td>
+            <td>
+                <pre><button class="btn btn-primary" (click)=editEmp();>Edit</button> <button class="btn btn-primary" (click)=updateEmp();>Update</button></pre>
+            </td>
+        </tr>
+
+    </tbody>
+    
+</table>
